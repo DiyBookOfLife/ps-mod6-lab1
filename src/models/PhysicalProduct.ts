@@ -10,9 +10,13 @@ class PhysicalProduct extends Product {
     this.weight = weight; // defined weight property
   }
 
-  // override getPriceWithTax() to calc final price 10% tax rate
+  // override getPriceWithTax() : final price 10% tax rate
   getPriceWithTax(): number {
-      let tax = .10
-      return this.price + this.price * tax
+      return this.price * 1.1
+  }
+
+  // getter method to return formatted weight in kg
+  get formattedWeight(): string {
+    return `Product weight: ${this.weight} kg`;
   }
 }
