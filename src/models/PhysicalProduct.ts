@@ -11,12 +11,12 @@ class PhysicalProduct extends Product {
   }
 
   // override getPriceWithTax() : final price 10% tax rate
-  getPriceWithTax(): number {
-      return this.price * 1.1
+  getPriceWithTax(taxRate: number): number {
+    return this.price + this.price * taxRate;
   }
 
   // getter method to return formatted weight in kg
   get formattedWeight(): string {
-    return `Product weight: ${this.weight} kg`;
+    return `Product weight: ${this.weight} KG`;
   }
 }
