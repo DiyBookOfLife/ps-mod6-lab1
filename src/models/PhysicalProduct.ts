@@ -2,7 +2,7 @@
 import Product from "./Product.js";
 
 // extended class of Product
-class PhysicalProduct extends Product {
+export class PhysicalProduct extends Product {
   weight: number; // added weight property
 
   constructor(sku: string, name: string, price: number, weight: number) {
